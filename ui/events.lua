@@ -23,16 +23,15 @@ function Events.on_tick(event)
         Debug:debug('[Events] OnTick', event)
         for _, player in pairs(game.players) do
           local playerList = PlayersList:new(player)
-          playerList:render()
+          if player.connected then
+            playerList:render()
+          else
+            playerList:reset()
+          end
         end
     end
 end
 
 function Events:init()
-  script.on_configuration_changed(self.on_configuration_changed)
-  script.on_init(self.on_configuration_changed)
-  script.on_load(self.on_load)
-  
-  script.on_event(defines.events.on_player_created, self.on_player_created)
   script.on_event(defines.events.on_tick, self.on_tick)
 end

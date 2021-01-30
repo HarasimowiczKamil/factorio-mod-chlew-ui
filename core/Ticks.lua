@@ -49,5 +49,9 @@ function Ticks.smartFormat (ticks)
         return Ticks.format(ticks, '{HH}:{ii}:{ss}')
     end
 
-    return Ticks.format(ticks, '{II}:{ss}')
+    if minutes > 0 then
+        return Ticks.format(ticks, '{II}:{ss}')
+    end
+    
+    return Ticks.format(ticks, '{s}')
 end

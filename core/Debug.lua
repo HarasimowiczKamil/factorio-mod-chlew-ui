@@ -1,9 +1,9 @@
 Debug = {}
 
-Debug.filename="chlew-ui\\chlew-ui.log"
+Debug.filename="chlew-ui/chlew-ui.log"
 Debug.limit = 5
 Debug.append = false
-Debug.mode = false
+Debug.mode = true
 
 if Debug.mode then
   Debug.print_tb = {
