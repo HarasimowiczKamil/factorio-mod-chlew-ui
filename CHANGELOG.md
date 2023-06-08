@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.8
+- disable debug mode 
+
 ## 0.1.7
 - add thumbnail only
 
