@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.1.9
+- disable all debug log
+
 ## 0.1.8
 - disable debug mode 
 

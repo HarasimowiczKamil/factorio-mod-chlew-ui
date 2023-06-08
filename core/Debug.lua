@@ -108,7 +108,6 @@ function Debug:print_to_file(message)
 end
 
 function Debug:print(type, message)
-  log('[DEBUG:1] ' .. type .. ': ' .. Debug:rec_obj_to_string(self.print_tb[type]))
   if self.print_tb[type][1] then
     self:print_to_chat(message)
   end
